@@ -1,0 +1,36 @@
+{
+  "model_name": "XGBoost (Final)",
+  "target_definition": {
+    "Normal": 0,
+    "Failure": 1,
+    "rule": "DTC_NUMBER==\"MIL is OFF0 codes\"->Normal; else Failure"
+  },
+  "feature_names": [
+    "CAR_YEAR",
+    "THROTTLE_POS",
+    "FUEL_TYPE_Biodiesel_Ethanol",
+    "FUEL_TYPE_missing",
+    "ENGINE_POWER",
+    "ENGINE_COOLANT_TEMP"
+  ],
+  "feature_count": 6,
+  "random_state": 42,
+  "test_size": 0.2,
+  "training_date": "2026-08-15 23:38",
+  "best_hyperparameters": {
+    "subsample": "1.0",
+    "n_estimators": "200",
+    "min_child_weight": "1",
+    "max_depth": "3",
+    "learning_rate": "0.1",
+    "gamma": "0",
+    "colsample_bytree": "0.8"
+  },
+  "test_metrics": {
+    "Accuracy": 0.9911,
+    "Precision": 0.9878,
+    "Recall": 0.9331,
+    "F1": 0.9597,
+    "ROC-AUC": 0.9947
+  }
+}
